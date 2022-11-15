@@ -14,7 +14,7 @@ A única calculadora do mundo que nunca calcula nada poupando processamento prec
 
 Caso esta calculadora não seja adequada para si ou precise de trabalhar com números complicados use da pasta /verdadeira/main.py 
 
-##Modo de utilização
+## Modo de utilização
 Caso pretenda ter a experiência completa precisa de fazer umas modificações:
 
 1 - Em cada script em geradores/, modifique o max_numbers para 1000. Se sentir aventureiro mude para 10000 que é o recomendado.
