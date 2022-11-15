@@ -17,13 +17,9 @@ def find_result(num1, num2, op):
     # encontrar ficheiro
     if op == "sqrt":
         return read_result("sqrt/" + str(num1))
-    elif op in "+-*/^":
-        return 1
     else:
-        return "NaN"
+        return read_result(op + "/" + str(num1) + "." + str(num2))
     # retornar o conteudo do ficheiro
-
-    return
 
 
 def new_version():
@@ -126,7 +122,19 @@ def calc():
     if num2 == -1:
         return
 
-    print(str(num1) + " " + op + " " + str(num2))
+    try:
+        if op == '+':
+            print(find_result(num1, num2, "soma"))
+        elif op == '-':
+            print(find_result(num1, num2, "sub"))
+        elif op == '*':
+            print(find_result(num1, num2, "mult"))
+        elif op == '/':
+            print(find_result(num1, num2, "div"))
+        else:
+            print("Erro desconhecido")
+    except ValueError:
+        print("Use só números inteiros entre 0 e 10000. Na v2.0 já vai poder usar números decimais.")
 
 
 if __name__ == '__main__':
